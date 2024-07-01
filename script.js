@@ -143,8 +143,20 @@ function moveTetrominoDown(){
 
 function draw(){
     cells.forEach( el => el.removeAttribute('class'))
+    fallingFigure();
     drawPlayfield();
     drawTetramino();
+}
+
+// FALING
+
+function fallingFigure(){
+
+    tetromino.row += 1;
+        if(!isValid()){
+            tetromino.row -= 1;
+            placeTetramino()
+        }
 }
 
 // ROTATE
