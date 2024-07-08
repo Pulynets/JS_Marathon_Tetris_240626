@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+}
+
+
+
+
+
+body{
+    background: linear-gradient(90deg, rgb(18, 13, 164), rgb(98, 255, 0));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.tetris{
+    border: 5px solid orange;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+}
+
+.score{
+    font-size: 60px;
+    font-family: Arial, sans-serif;
+    margin-left: 30px;
+    border: 10px solid white;
+    padding: 20px;
+    border-radius: 30px;
+    /* background: gold; */
+    font-weight: bold;
+    min-width: 80px;
+    text-align: center;
+}
+
+.tetris div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background: rgba(211, 211, 211, 0.4);
+    box-shadow: 
+        inset 2px 2px 2px rgb(221, 54, 54),
+        inset -2px -2px 2px rgb(62, 0, 139)
+    ;
+}
+
+.tetris .O{
+    background: red;
+}
+
+.tetris .L{
+    background: green;
+}
+
+.tetris .J{
+    background: purple;
+}
+
+.tetris .T{
+    background: blue;
+}
+
+.tetris .I{
+    background: yellow;
+}
+
+.tetris .S{
+    background: aqua;
+}
+
+.tetris .Z{
+    background: brown;
+}
+
+.overlay{
+    background: rgba(62, 0, 139, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-restart{
+    cursor: pointer;
+    width: 400px;
+    height: 200px;
+    font-size: 80px;
+    border-radius: 20px;
+    border: 15px solid #57006b;
+    background: #c60bf0;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: linear-gradient(45deg, #222831, #EEEEEE);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tetris {
+    border: 5px solid #00ADB5;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+
+}
+
+/* .tetris div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background: rgba(211, 211, 211, 0.4);
+    box-shadow: 
+        inset 2px 2px 2px rgb(221, 54, 54),
+        inset -2px -2px 2px rgb(62, 0, 139)
+    ;
+} */
+
+.score{
+    font-size: 40px;
+    font-family: Arial,
+    sans-serif;
+    margin-left: 10px;
+
+    border: 10px solid #393E46;
+    padding: 20px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.tetris div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background: rgba(211, 211, 211, 0.4);
+    box-shadow: 
+    /* inset 2px 2px 2px black,
+    inset -2px -2px -2px wheat */
+        /* /* inset 2px 2px 2px rgb(221, 54, 54), */
+        /* inset -2px -2px -2px rgb(105, 245, 11),  */
+        inset 2px 2px 2px #00ADB5,
+        inset -2px -2px 2px #393E46
+        /* inset -2px -2px -2px rebeccapurple */
+    ;
+
+}
+
+.tetris .O {
+    background-color: #F9ED69;
+}
+
+.tetris .L {
+    background-color: #F08A5D;
+}
+
+.tetris .J {
+    background-color: #B83B5E;
+}
+
+
+.tetris .T {
+    background-color: #6A2C70;
+}
+
+.tetris .I {
+    background-color: #08D9D6
+}
+
+.tetris .S {
+    background-color: #FF2E63;
+}
+
+.tetris .Z {
+    background-color: #EAEAEA;
+}
+
+.overlay{
+    background: rgba(62, 0, 139, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.score-result{
+    font-size: 100px;
+    color: #000;
+    background: orange;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.time-game{
+    font-size: 50px;
+    border: 40px solid red;
+    padding: 50px;
+}
+
+.btn-restart{
+    cursor: pointer;
+    width: 400px;
+    height: 200px;
+    font-size: 80px;
+    border-radius: 20px;
+    border: 15px solid #57006b;
+    background: #c60bf0;
+    color: #fff;
+}
+
+.btn-restart-permanent{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 15px solid #57006b;
+    background: #c60bf0;
+    color: #fff;
+}

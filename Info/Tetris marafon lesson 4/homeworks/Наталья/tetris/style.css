@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(180deg,  rgb(71, 181, 254), rgb(183, 226, 255));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+}
+
+.check{
+    height: min(10vh, 13vw);
+    width: min(10vh, 13vw);
+    margin: 10vh;
+    border: 3px solid grey;
+    background: radial-gradient(rgb(191, 191, 191), grey);
+    border-radius: 3px;
+    color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check div{
+    font-size: 5vh;
+}
+
+.tetris{
+    border: 5px solid grey;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+}
+
+.tetris div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background: radial-gradient(rgb(191, 191, 191), grey);
+    box-shadow: 
+        /* inset 2px 2px 2px grey,
+        inset -2px -2px 2px blue; */
+        inset 1px 1px 1px grey,
+        inset -1px -1px 1px blue;
+}
+
+.tetris .point{
+    background: brown;
+}
+
+.tetris .L{
+    background: rgb(204, 255, 0);
+}
+
+.tetris .J{
+    background: pink;
+}
+
+.tetris .I{
+    background: rgb(172, 124, 255);
+}
+
+.tetris .Z{
+    background: rgb(250, 119, 4);
+}
+
+.tetris .S{
+    background: red;
+}
+
+.tetris .T2{
+    background: violet;
+}
+
+.tetris .T{
+    background: blue;
+}
+
+.tetris .plus{
+    background: aquamarine;
+}
+
+.tetris .O{
+    background: yellow;
+}
+
+.tetris div.r{
+    background: rgb(34, 205, 57);
+}

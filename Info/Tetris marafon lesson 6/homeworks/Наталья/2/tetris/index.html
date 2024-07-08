@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="tetris">
+
+        </div>
+
+        <div class="table">
+            <div class="background">
+                <div>Record</div>
+                <div class="record"></div>
+            </div>
+
+            <div class="background">
+                <span>Speed</span>
+                <div class="speed-change">
+                    <button class="btn-speed speed-reduction">&lt</button>
+                    <div class="speed">0</div>
+                    <button class="btn-speed speed-increase">&gt</button>
+                </div>
+            </div>
+
+            <div class="background">
+                <span>Score</span>
+                <div class="score">000</div>
+            </div>
+    
+            <div class="pause background">Pause</div>
+            <div class="restart background">Restart</div>
+    
+        </div>
+    
+    </div>
+
+    <div class="overlay">
+        <div class="overlay-container">
+            <div class="game-over">Game over</div>
+            <div>Score <span class="game-over-score">7</span></div>
+            <div><span class="game-over-number">5</span> games played</div>
+            <div>Record <span class="game-over-record">67</span> lines</div>
+            <button class="btn-restart">Try again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

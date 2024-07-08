@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+}
+
+body{
+      background: linear-gradient(90deg, rgb(100, 172, 100), 
+      rgb(196, 196, 75));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tetris{
+    border: 5px solid orange;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+}
+
+.tetris div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background: rgba(211, 211, 211, 0.356);
+    box-shadow: 
+    inset 2px 2px 2px black,
+    inset -2px -2px 2px blueviolet;
+}
+
+
+
+
+.tetris .R{
+    background: red;
+}
+
+.tetris .Y{
+    background: yellow;
+}
+
+.tetris .G{
+    background: green;
+}
+
+.tetris .C{
+    background: cyan;
+}
+
+.tetris .B{
+    background: blue;
+}
+
+.tetris .O{
+    background: orange;
+}
+
+.tetris .P{
+    background: purple;
+}
+
+.tetris .BR{
+    background: brown;
+}
+
+.tetris .BL{
+    background: black;
+}
+
+.tetris .W{
+    background: white;
+}
