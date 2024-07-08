@@ -5,21 +5,54 @@
 body{
     background: linear-gradient(160deg, rgb(228, 225, 212), white);
     height: 100vh;
+    margin: 1vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* STATISTIC */
 .statistic{
-    height: 80vh;
-    width: min(40vh, 70vw);
-    margin:4vw;
+    height: min(80vh, 140vw);
+    width: min(16vh, 28vw);
+    margin-right: min(4vh, 7vw);
     border: 4px solid white;
     border-top: 4px solid rgb(217, 223, 231);
     border-left: 4px solid rgb(217, 223, 231);
-    display: grid;
+
+    font-size: 2.5vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: rgb(65, 60, 94);
 }
 
+.statistic div{
+    height: min(4vh, 7vw);
+    box-shadow:
+    inset 2px 2px 2px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 2px rgba(210, 220, 233, 0.5);
+}
+
+div .nextWindow{
+    height: auto;
+    padding: 0px;
+    border: 0px solid white;
+    border-top: 0px solid rgb(217, 223, 231);
+    border-left: 0px solid rgb(217, 223, 231);
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+}
+
+.nextWindow div{
+    height: min(4vh, 7vw);
+    width: min(4vh, 7vw);
+    background: lightyellow;
+    box-shadow: 
+    inset 2px 2px 2px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 2px rgba(210, 220, 233, 0.5);
+}
+
+/* TETRIS */
 .tetris{
     border: 4px solid white;
     border-top: 4px solid rgb(217, 223, 231);

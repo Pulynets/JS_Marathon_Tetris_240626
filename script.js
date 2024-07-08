@@ -5,6 +5,7 @@ const PLAYFIELD_COLUMNS = 10;
 const PLAYFIELD_ROWS = 20;
 
 let playfield;
+let cells;
 
 const TETROMINO_NAMES = [
     'O',
@@ -62,6 +63,14 @@ let tetromino = {
 }
 
 // COMMON
+function init(){
+    generatePlayfield()
+    cells = document.querySelectorAll('.tetris div');
+    generateTetromino()
+    
+    draw()
+}
+
 function convertPositionToIndex(row, col){
     return row * PLAYFIELD_COLUMNS + col;
 }
@@ -71,7 +80,7 @@ function generateTetromino(){
     const nameTetro   = getRandomFigure(TETROMINO_NAMES);
     const matrix      = TETROMINOES[nameTetro];
     const columnTetro = Math.floor( PLAYFIELD_COLUMNS / 2 - matrix.length / 2);
-    const rowTetro    = 0;
+    const rowTetro    = -2;
 
     tetromino = {
         name:   nameTetro,
@@ -143,21 +152,21 @@ function moveTetrominoDown(){
 
 function draw(){
     cells.forEach( el => el.removeAttribute('class'))
-    fallingFigure();
+    //fallingFigure();
     drawPlayfield();
     drawTetramino();
 }
 
 // FALING
 
-function fallingFigure(){
+/* function fallingFigure(){
 
     tetromino.row += 1;
         if(!isValid()){
             tetromino.row -= 1;
             placeTetramino()
         }
-}
+} */
 
 // ROTATE
 
@@ -209,6 +218,10 @@ function isValid(){
     return true;
 }
 
+function isOutsidOfTopeGameBoard(row){
+    return tetromino.row + row < 0;
+}
+
 function isOutsideGameBoard(row, column){
     return tetromino.matrix[row][column] &&
            (tetromino.row + row >= PLAYFIELD_ROWS ||
@@ -231,12 +244,10 @@ function drawTetramino(){
             // Код для прикладу обертання фігур
             // const cellIndex = convertPositionToIndex(tetromino.row + row, tetromino.column + column);
             // cells[cellIndex].innerHTML = showRotated[row][column];
-
-
+            if(isOutsidOfTopeGameBoard(row)) {continue}
             if(!tetromino.matrix[row][column]){continue}
             const cellIndex = convertPositionToIndex(tetromino.row + row, tetromino.column + column);
-            cells[cellIndex].classList.add(name);
-            
+            cells[cellIndex].classList.add(name);            
         }
     }
 }
@@ -270,9 +281,4 @@ function placeTetramino(){
 }
 
 // MAIN
-generatePlayfield()
-let cells = document.querySelectorAll('.tetris div');
-
-generateTetromino()
-
-draw()
+init();
